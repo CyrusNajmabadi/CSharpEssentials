@@ -10,7 +10,7 @@ namespace CSharpEssentials.UseExpressionBodiedMember
     internal class UseExpressionBodiedMemberAnalyzer : DiagnosticAnalyzer
     {
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics =>
-            ImmutableArray.Create(DiagnosticDescriptors.FadedToken, DiagnosticDescriptors.UseExpressionBodiedMember);
+            ImmutableArray.Create(DiagnosticDescriptors.UseExpressionBodiedMemberFadedToken, DiagnosticDescriptors.UseExpressionBodiedMember);
 
         public override void Initialize(AnalysisContext context)
         {
@@ -215,7 +215,7 @@ namespace CSharpEssentials.UseExpressionBodiedMember
         {
             if (!token.IsMissing)
             {
-                context.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.FadedToken, token.GetLocation()));
+                context.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.UseExpressionBodiedMemberFadedToken, token.GetLocation()));
             }
         }
     }

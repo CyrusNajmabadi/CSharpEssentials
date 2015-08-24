@@ -13,8 +13,8 @@ namespace CSharpEssentials
             isEnabledByDefault: true,
             customTags: new[] { WellKnownDiagnosticTags.Unnecessary });
 
-        public static readonly DiagnosticDescriptor FadedToken = new DiagnosticDescriptor(
-            id: "FadedToken",
+        public static readonly DiagnosticDescriptor UseExpressionBodiedMemberFadedToken = new DiagnosticDescriptor(
+            id: "UseExpressionBodiedMemberFadedToken",
             title: "Use expression-bodied members",
             messageFormat: "Consider using an expression-bodied member",
             category: DiagnosticCategories.Language,
@@ -37,5 +37,22 @@ namespace CSharpEssentials
             category: DiagnosticCategories.Language,
             defaultSeverity: DiagnosticSeverity.Warning,
             isEnabledByDefault: true);
+
+        public static readonly DiagnosticDescriptor UseNullConditionalOperator = new DiagnosticDescriptor(
+            id: DiagnosticIds.UseNullConditionalOperator,
+            title: "Use ?. instead of explicitly checking for 'null'",
+            messageFormat: "Consider using ?.",
+            category: DiagnosticCategories.Language,
+            defaultSeverity: DiagnosticSeverity.Hidden,
+            isEnabledByDefault: true);
+
+        public static readonly DiagnosticDescriptor UseNullConditionalOperatorFadedToken = new DiagnosticDescriptor(
+            id: "UseNullConditionalOperatorFadedToken",
+            title: "Use ?. instead of explicitly checking for 'null'",
+            messageFormat: "Consider using ?.",
+            category: DiagnosticCategories.Language,
+            defaultSeverity: DiagnosticSeverity.Hidden,
+            isEnabledByDefault: true,
+            customTags: new[] { WellKnownDiagnosticTags.Unnecessary });
     }
 }
